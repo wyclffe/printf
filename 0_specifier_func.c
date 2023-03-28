@@ -1,4 +1,4 @@
-#include "print.h"
+#include "main.h"
 
 /* Implementation of the print_char specifier function */
 void print_char(va_list args)
