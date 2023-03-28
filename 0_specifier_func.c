@@ -1,6 +1,11 @@
 #include "main.h"
 
-/* Implementation of the print_char specifier function */
+/**
+ * print_char - implementation of the %c coversion specifier
+ * @args: va_list containing the argument to print
+ * Descript: Function prints character argument passed as parameter to stdout
+ */
+
 void print_char(va_list args)
 {
 	int value = va_arg(args, int);
@@ -8,7 +13,12 @@ void print_char(va_list args)
 	putchar(value);
 }
 
-/* Implementation of the print_decimal specifier function */
+/**
+ * print_int - implementation of the %d conversion specifier
+ * @args: va_list containing the argument to print
+ * Descrpition: Function prints integer argument passed as parameter to stdout
+ */
+
 void print_int(va_list args)
 {
 	int value = va_arg(args, int);
@@ -38,7 +48,12 @@ void print_int(va_list args)
 	}
 }
 
-/* Implementation of the print_string specifier function */
+/**
+ * print_string - implementation of the %s conversion specifier
+ * @args: va_list containing the argument to print
+ * Description: Function prints string argument passed as parameter to stdout
+ */
+
 void print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
@@ -50,7 +65,12 @@ void print_string(va_list args)
 	}
 }
 
-/* Implementation of the print_percent specifier function */
+/**
+ * print_percent - implementation of the %% conversion specifier
+ * @args: va_list containing the argument to print
+ * Description: Function prints the percent sign to the stdout
+ */
+
 void print_percent(va_list args)
 {
 	putchar('%');
